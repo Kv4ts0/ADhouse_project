@@ -73,50 +73,19 @@
             </div>
         </div>
     </div>
+   
     <div class="third_sec">
         <div class="container third">
+            @foreach($products->take(6) as $pr)
             <div class="card">
-                <h3>Eco solvent (Toner)</h3>
-                <p>All Varieties of Eco 
-                    Solvent (Toner)</p>
+                
+                <h3>{{ $pr->name }}</h3>
+                <p class="limitedp5">{{ $pr->description }}</p>
+                <input id="readMore" type="button" value="Read more">
                 <div></div>
-                <img src="./images/pic1.jpg" alt="Ink product image">
+                <img src="storage/post/{{$pr->image1}}" alt="Ink product image">
             </div>
-            <div class="card">
-                <h3>Colored bank paper</h3>
-                <p>All Varieties of Bank
-                    Paper</p>
-                <div></div>
-                <img src="./images/pic2.jpg" alt="Ink product image">
-            </div>
-            <div class="card">
-                <h3>Sp600 Ink (Toner)</h3>
-                <p>Sp600 Ink; Yellow, 
-                    Cyan, Magenta, Black</p>
-                <div></div>
-                <img src="./images/pic3.jpg" alt="Ink product image">
-            </div>
-            <div class="card">
-                <h3>Bond max ink</h3>
-                <p>Bond Max Ink; Yellow, 
-                    Cyan, Magenta, Black</p>
-                <div></div>
-                <img src="./images/pic4.jpg" alt="Ink product image">
-            </div>
-            <div class="card">
-                <h3>Kord / Moz Blanket</h3>
-                <p>All Varieties of Moz
-                    Blanket</p>
-                <div></div>
-                <img src="./images/pic5.jpg" alt="Ink product image">
-            </div>
-            <div class="card">
-                <h3>Carbonized paper</h3>
-                <p>Carbonized Paper 
-                    White & Colored</p>
-                <div></div>
-                <img src="./images/pic6.jpg" alt="Ink product image">
-            </div>
+            @endforeach
         </div>
         <ul>
             <li id="active"></li>
@@ -124,6 +93,7 @@
             <li></li>
         </ul>
     </div>
+    
     <div class="fourth_sec" id="contact">
         <img src="./images/map.png" class="radialImg" alt="">
         <div>

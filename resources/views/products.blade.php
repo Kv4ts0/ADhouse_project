@@ -50,11 +50,22 @@
         </div>
         <img src="./images/neonimg.jpg" class="rectangleIMG" alt="">
     </div>
+    
+                <tr>
+                    <td colspan="2"><input class="form-control" type="number" name="id" value="{{$filters['id']}}" placeholder="ID"></td>
+                    <td><input class="form-control" type="text" name="name" value="{{$filters['name']}}" placeholder="Name"></td>
+                    <td colspan="2"><input class="form-control" type="text" name="category" value="{{$filters['category']}}" placeholder="Category"></td>
+                    <td colspan="2"><input class="form-control" type="number" step="any" name="min_price" value="{{$filters['min_price']}}"placeholder="Min Price"></td>
+                    <td colspan="2"><input class="form-control" type="number" step="any" name="max_price" value="{{$filters['max_price']}}" placeholder="Max Price"></td>
+                    <td><button class="btn btn-success" type="submit">Filter</button></td>
+                </tr>
+            </form>
     <div class="products">
         <div class="filter">
             <div class="sort">
                 <input type="text" placeholder="Search">
                 <p>Categories</p>
+                <form action="{{ route('allproducts.all') }}" >
                 <ul>
                     <li><span class="material-symbols-outlined">brush </span><a href=""> Inks</a></li>
                     <li><span class="material-symbols-outlined">print </span><a href=""> Printing Materials</a></li>
@@ -78,74 +89,29 @@
             
         </div>
         <div class="allProducts">
+            @foreach($products->take(6) as $pr)
             <div class="card">
-                <h3>Colored bank paper</h3>
-                <p>All Varieties of Bank
-                    Paper</p>
+                <h3>{{$pr->name}}</h3>
+                <p class="limitedp5">{{$pr->description}}</p>
+                <input id="readMore" type="button" value="Read more">
                 <div></div>
-                <img src="./images/pic2.jpg" alt="Ink product image">
+                <img src="storage/post/{{$pr->image1}}" alt="Ink product image">
             </div>
-            <div class="card">
-                <h3>Colored bank paper</h3>
-                <p>All Varieties of Bank
-                    Paper</p>
-                <div></div>
-                <img src="./images/pic2.jpg" alt="Ink product image">
-            </div>
-            <div class="card">
-                <h3>Colored bank paper</h3>
-                <p>All Varieties of Bank
-                    Paper</p>
-                <div></div>
-                <img src="./images/pic2.jpg" alt="Ink product image">
-            </div>
-            <div class="card">
-                <h3>Colored bank paper</h3>
-                <p>All Varieties of Bank
-                    Paper</p>
-                <div></div>
-                <img src="./images/pic2.jpg" alt="Ink product image">
-            </div>
-            <div class="card">
-                <h3>Colored bank paper</h3>
-                <p>All Varieties of Bank
-                    Paper</p>
-                <div></div>
-                <img src="./images/pic2.jpg" alt="Ink product image">
-            </div>
-            <div class="card">
-                <h3>Colored bank paper</h3>
-                <p>All Varieties of Bank
-                    Paper</p>
-                <div></div>
-                <img src="./images/pic2.jpg" alt="Ink product image">
-            </div>
+            @endforeach
         </div>
     </div>
     <div class="third_sec">
         <h1>Popular products</h1>
         <div class="container large">
+            @foreach($products->take(3) as $pr)
             <div class="card">
-                <h3>Sp600 Ink (Toner)</h3>
-                <p>Sp600 Ink; Yellow, 
-                    Cyan, Magenta, Black</p>
+                <h3>{{$pr->name}}</h3>
+                <p class="limitedp30">{{$pr->description}}</p>
+                <input id="readMoreB" type="button" value="Read more">
                 <div></div>
-                <img src="./images/pic3.jpg" alt="Ink product image">
+                <img src="storage/post/{{$pr->image1}}" alt="Ink product image">
             </div>
-            <div class="card">
-                <h3>Sp600 Ink (Toner)</h3>
-                <p>Sp600 Ink; Yellow, 
-                    Cyan, Magenta, Black</p>
-                <div></div>
-                <img src="./images/pic3.jpg" alt="Ink product image">
-            </div>
-            <div class="card">
-                <h3>Sp600 Ink (Toner)</h3>
-                <p>Sp600 Ink; Yellow, 
-                    Cyan, Magenta, Black</p>
-                <div></div>
-                <img src="./images/pic3.jpg" alt="Ink product image">
-            </div>
+            @endforeach
         </div>
         <ul>
             <li id="active"></li>

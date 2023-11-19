@@ -9,8 +9,9 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function viewAllProduct(Request $request){
+    public function getFilteredProducts(Request $request){
         $products = Product::orderBy("created_at", "DESC");
+    
         if($request->id != null){
             $products->where('id', $request->id);
         }
@@ -26,7 +27,11 @@ class ProductController extends Controller
         if($request->category != null){
             $products->where('category', $request->category);
         }
-        $products = $products->get();
+        return $products->get();
+    }    
+    public function viewAllProduct(Request $request){
+        $products = $this->getFilteredProducts($request);
+    
         return view('all-product')->with('products', $products)->with('filters', [
             'id' => $request->id,
             'name' => $request->name,
@@ -96,10 +101,8 @@ class ProductController extends Controller
         $name3 = $request->file('image3')->getClientOriginalName();
         $size4 = $request->file('image4')->getSize();
         $name4 = $request->file('image4')->getClientOriginalName();
-        
         $request->file('image1')->storeAs('public/post', $name1);
         $product->image1 = $name1;
-
         $request->file('image2')->storeAs('public/post', $name2);
         $product->image2 = $name2;
         $request->file('image3')->storeAs('public/post', $name3);
@@ -112,5 +115,26 @@ class ProductController extends Controller
     public function deleteProduct(Request $request){
         Product::where('id', $request->product_id)->delete();
         return redirect()->route('products.all');
+    }
+
+    public function viewHomepage(Request $request){
+        $products = $this->getFilteredProducts($request);
+        return view('index')->with('products', $products)->with('filters', [
+            'id' => $request->id,
+            'name' => $request->name,
+            'category' => $request->category,
+            'min_price' => $request->min_price,
+            'max_price' => $request->max_price,
+        ]);
+    }
+    public function viewProductpage(Request $request){
+        $products = $this->getFilteredProducts($request);
+        return view('products')->with('products', $products)->with('filters', [
+            'id' => $request->id,
+            'name' => $request->name,
+            'category' => $request->category,
+            'min_price' => $request->min_price,
+            'max_price' => $request->max_price,
+        ]);
     }
 }

@@ -1,6 +1,15 @@
 @extends('layout.main')
 
 @section('content')
+<style>
+    .limitedp{
+        max-width: 200px;
+        height: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: wrap;
+    }
+</style>
 <body>
     <table class="table">
     <tr>
@@ -50,7 +59,7 @@
                 <td><input class="form-control" type="text" name="brand" placeholder="Brand"></td>
                 <td><input class="form-control" type="text" name="color" placeholder="Color"></td>
                 <td><input class="form-control" type="text" name="material" placeholder="Material"></td>
-                <td><input class="form-control" type="text" name="description" placeholder="Description"></td>
+                <td><input class="form-control" type="text" name="description"  placeholder="Description"></td>
                 <td><input class="form-control" type="file" name="image1" placeholder="image1"></td>
                 <td><input class="form-control" type="file" name="image2" placeholder="image2"></td>
                 <td><input class="form-control" type="file" name="image3" placeholder="image3"></td>
@@ -71,7 +80,7 @@
                 <td>{{ $pr->brand }}</td>
                 <td>{{ $pr->color }}</td>
                 <td>{{ $pr->material }}</td>
-                <td>{{ $pr->description }}</td>
+                <td><p class="limitedp">{{ $pr->description }}</p></td>
                 <td><img width=100px height="100px" src="storage/post/{{$pr->image1}}" alt=""></td>
                 <td><img width=100px height="100px" src="storage/post/{{$pr->image2}}" alt=""></td>
                 <td><img width=100px height="100px" src="storage/post/{{$pr->image3}}" alt=""></td>

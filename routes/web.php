@@ -4,9 +4,9 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/index', "App\Http\Controllers\PageController@home");
-Route::get('/', "App\Http\Controllers\PageController@home");
-Route::get('/allproducts', "App\Http\Controllers\PageController@products");
+Route::get('/index', "App\Http\Controllers\ProductController@viewHomepage");
+Route::get('/', "App\Http\Controllers\ProductController@viewHomepage");
+Route::get('/allproducts', "App\Http\Controllers\ProductController@viewProductpage")->name('allproducts.all');;
 Route::get('/faq', "App\Http\Controllers\PageController@faq");
 
 Route::middleware('custom-auth')->get('/product/edit/{id}', '\App\Http\Controllers\ProductController@editProduct')->name('products.edit');

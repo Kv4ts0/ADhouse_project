@@ -11,6 +11,26 @@ header{
     color: white;
     display: flex;
 }
+.limitedp{
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.limitedp5{
+    max-width: 150px;
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
+.limitedp30{
+    max-width: 200px;
+    height: 82px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
 header > a img{
     width: 10rem;
     margin-left: 100px;
@@ -152,6 +172,27 @@ nav li a{
     border-radius: 10px;
     height: 2rem;
     width: 10rem;
+}
+#readMore{
+    border-radius: 6px;
+    font-size: 15px;
+    width: 6rem;
+    position: absolute;
+    background-color: #4A203F;
+    bottom: 0;
+    right: 0;
+}
+#readMoreB{
+    border-radius: 12px;
+    font-size: 20px;
+    width: 10rem;
+    position: absolute;
+    background-color: #4A203F;
+    bottom: 0;
+    right: 0;
+}
+#readMore[value="Read more"], #readMoreB[value="Read more"]{
+    color: white;
 }
 .third_sec .third .card div, .allProducts .card div, .third_sec .large .card div{
     background-color: black;
