@@ -1,0 +1,302 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+header{
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: flex;
+}
+header > a img{
+    width: 10rem;
+    margin-left: 100px;
+}
+nav{
+    margin-left: auto;
+    font-size: 20px;
+}
+nav li{
+    padding: 0 2rem;
+    float: left;
+    list-style: none;
+}
+nav li a{
+    text-decoration: none;
+    color: #4A203F;
+}
+.authorization{
+    margin-left: auto;
+    margin-right: 100px;
+}
+.authorization > input{
+    background-color: #5F2F51;
+    color: white;
+    font-size: 20px;
+}
+.language{
+    margin-right: 100px;
+}
+.first_sec{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/decoration.svg");
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10rem;
+}
+.container{
+    flex-direction: column;
+    display: flex;
+    width: 30rem;
+    color: white;
+    font-size: 18px;
+}
+.second_sec{
+    margin-top: 10rem;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/decoration2.svg");
+}
+.second{
+    flex-direction: row;
+    width: 60rem;
+    gap: 10rem;
+}
+.third_sec{
+    margin-top: 10rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../images/decoration3.svg");
+}
+.third{
+    width: 45rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 13rem 13rem 13rem;
+    grid-template-rows: 13rem 13rem;
+}
+.large{
+    width: 100%;
+    display: grid;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 20rem 20rem 20rem;
+    grid-template-rows: 20rem;
+}
+.fourth_sec{
+    color: white;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/decoration5.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.qa{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    color: black;
+}
+.qa .qacard{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: white;
+}
+.faq{
+    height: 100%;
+}
+.qaH{
+    margin-bottom: 1rem;
+}
+.faq img{
+    margin-bottom: 10rem;
+    width: 30rem;
+}
+.fourth_sec div{
+    width: 30rem;
+}
+.fourth_sec div p{
+    font-size: 20px;
+}
+
+.container input{
+    position: relative;
+    align-self: flex-end;
+    border: none;
+    font-size: 20px;
+    color: #5F2F51;
+    border-radius: 10px;
+    height: 2rem;
+    width: 10rem;
+}
+.third_sec .third .card div, .allProducts .card div, .third_sec .large .card div{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 30%;
+    
+}
+.third_sec .third .card div:hover, .allProducts .card div:hover, .third_sec .large .card div:hover{
+    display: none;
+}
+.card{
+    border: 0.3px solid white;
+    padding: 0.6rem;
+    position: relative;
+    top: 30px;
+    color: rgb(255, 255, 255);
+    background-color: white;
+}
+.card img{
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.card h3{
+    z-index: 2;
+    top: 5rem;
+    background-color: #5F2F51;
+}
+.card p{
+    z-index: 2;
+    top: 7rem;
+    color: #4A203F;
+    background-color: #ffffff;
+}
+.card h3, .card p{
+    position: absolute;
+    margin:0;
+    padding: 0;
+}
+#active{
+    color: white;
+}
+#activeItem{
+    font-weight: bold;
+}
+.container ul li, .third_sec ul li{
+    color: #5F2F51;
+    font-size: 70px;
+    float: left;
+    margin: 0 20px;
+}
+.radialImg{
+    border-radius: 50%;
+    border: 5px solid white;
+    width: 25rem;
+    height: 25rem;
+}
+.rectangleIMG{
+    border: 5px solid white;
+    width: 25rem;
+    height: 25rem;
+}
+footer{
+    color: white;
+    display: flex;
+    margin-top: 10rem;
+    width: 100%;
+    height: 20rem;
+    background-color: #A36190;
+}
+footer .company{
+    margin: 3rem 10rem;
+    width: 20rem;
+}
+footer nav{
+    margin: 3rem 0;
+    width: 10rem;
+}
+footer nav li{
+    font-size: 16px;
+    margin: 0.6rem 0;
+    list-style: none;
+}
+footer nav ul{
+    margin:0;
+    padding: 0;
+}
+footer nav li a{
+    color: white;
+}
+footer .switcher{
+    margin:3rem auto;
+}
+.products{
+    margin-top: 10rem;
+    background-image: url("../images/decoration7.svg");
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+.filter{
+    top:0;
+    background-color: #4A203F;
+    width: 20rem;
+    padding: 15px;
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+}
+.filter input{
+    background-color: #A36190;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    height: 30px;
+    margin: 10px 0;
+    width: 100%;
+}
+.sort p{
+    margin-bottom:0;
+    font-size: 20px;
+}
+.sort ul {
+    display: inline;
+}
+.sort ul li{
+    list-style: none;
+}
+.sort ul li img{
+    width: 50px;
+}
+.sort ul li a{
+    text-decoration: none;
+    color: white;
+}
+.allProducts{
+    display: grid;
+    width: 50rem;
+    grid-template-columns: repeat(3, 15rem);
+    grid-template-rows: repeat(2, 15rem);
+    gap: 3rem;
+}
