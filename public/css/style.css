@@ -302,20 +302,36 @@ footer .switcher{
 .filter{
     top:0;
     background-color: #4A203F;
-    width: 20rem;
-    padding: 15px;
-    height: 36rem;
+    width: 13rem;
+    padding: 10px;
+    height: 37rem;
     display: flex;
     flex-direction: column;
 }
+.filter input[placeholder="Search"]{
+    width: 90%;
+}
 .filter input{
     background-color: #A36190;
-    color: white;
     border: none;
+    width: 100px;
     border-radius: 18px;
+    color: white;
+    padding-left: 10px;
     height: 30px;
     margin: 10px 0;
-    width: 100%;
+}
+.filter input[type="text"]::placeholder, .filter input[type="number"]::placeholder{
+    padding-left: 10px;
+    color: white;
+}
+.filter button{
+    position: relative;
+    width: 50px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    float: right;
 }
 .sort p{
     margin-bottom:0;
@@ -336,7 +352,7 @@ footer .switcher{
 }
 .allProducts{
     display: grid;
-    width: 50rem;
+    width: 55rem;
     grid-template-columns: repeat(3, 15rem);
     grid-template-rows: repeat(2, 15rem);
     gap: 3rem;

@@ -51,40 +51,34 @@
         <img src="./images/neonimg.jpg" class="rectangleIMG" alt="">
     </div>
     
-                <tr>
-                    <td colspan="2"><input class="form-control" type="number" name="id" value="{{$filters['id']}}" placeholder="ID"></td>
-                    <td><input class="form-control" type="text" name="name" value="{{$filters['name']}}" placeholder="Name"></td>
-                    <td colspan="2"><input class="form-control" type="text" name="category" value="{{$filters['category']}}" placeholder="Category"></td>
-                    <td colspan="2"><input class="form-control" type="number" step="any" name="min_price" value="{{$filters['min_price']}}"placeholder="Min Price"></td>
-                    <td colspan="2"><input class="form-control" type="number" step="any" name="max_price" value="{{$filters['max_price']}}" placeholder="Max Price"></td>
-                    <td><button class="btn btn-success" type="submit">Filter</button></td>
-                </tr>
-            </form>
     <div class="products">
         <div class="filter">
             <div class="sort">
-                <input type="text" placeholder="Search">
-                <p>Categories</p>
                 <form action="{{ route('allproducts.all') }}" >
+                <td><input type="text" name="name" value="{{$filters['name']}}" placeholder="Search"></td>
+                <p>Categories</p>
+                
                 <ul>
-                    <li><span class="material-symbols-outlined">brush </span><a href=""> Inks</a></li>
-                    <li><span class="material-symbols-outlined">print </span><a href=""> Printing Materials</a></li>
-                    <li><span class="material-symbols-outlined">inventory </span><a href="">Accessories</a></li>
+                    <li><span class="material-symbols-outlined">brush </span><a href="{{ route('allproducts.all', ['category' => 'Inks']) }}"> Inks</a></li>
+                    <li><span class="material-symbols-outlined">print </span><a href="{{ route('allproducts.all', ['category' => 'Printing Materials']) }}"> Printing Materials</a></li>
+                    <li><span class="material-symbols-outlined">inventory </span><a href="{{ route('allproducts.all', ['category' => 'Accessories']) }}"> Accessories</a></li>
                 </ul>
                 <br>
                 <hr>
                 <p>Brands</p>
                 <ul>
-                    <li><span class="material-symbols-outlined">branding_watermark </span><a href=""> Folex</a></li>
-                    <li><span class="material-symbols-outlined">branding_watermark </span><a href=""> Sihl</a></li>
-                    <li><span class="material-symbols-outlined">branding_watermark </span><a href=""> Avery Dennison</a></li>
-                    <li><span class="material-symbols-outlined">branding_watermark </span><a href=""> 3A Composites</a></li>
+                    <li><span class="material-symbols-outlined">branding_watermark </span><a href="{{ route('allproducts.all', ['brand' => 'Folex']) }}"> Folex</a></li>
+                    <li><span class="material-symbols-outlined">branding_watermark </span><a href="{{ route('allproducts.all', ['brand' => 'Sihl']) }}"> Sihl</a></li>
+                    <li><span class="material-symbols-outlined">branding_watermark </span><a href="{{ route('allproducts.all', ['brand' => 'Avery Denission']) }}"> Avery Denission</a></li>
+                    <li><span class="material-symbols-outlined">branding_watermark </span><a href="{{ route('allproducts.all', ['brand' => '3A Composites']) }}"> 3A Composites</a></li>
                 </ul>
                 <br>
                 <hr>
                 <p>Price range</p>
-                <input type="number" value="Min"><br>
-                <input type="number" value="Max">
+                
+                <input type="number" value="Min" name="min_price" value="{{$filters['min_price']}}" placeholder="Min Price">
+                <input type="number" value="Max" name="max_price" value="{{$filters['max_price']}}" placeholder="Max Price">
+                <button type="submit"><span class="material-symbols-outlined">search</span></button>
             </div>
             
         </div>
@@ -114,6 +108,7 @@
             @endforeach
         </div>
         <ul>
+            
             <li id="active"></li>
             <li></li>
             <li></li>

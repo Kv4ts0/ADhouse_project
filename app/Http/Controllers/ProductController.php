@@ -27,6 +27,9 @@ class ProductController extends Controller
         if($request->category != null){
             $products->where('category', $request->category);
         }
+        if($request->brand != null){
+            $products->where('brand', $request->brand);
+        }
         return $products->get();
     }    
     public function viewAllProduct(Request $request){
