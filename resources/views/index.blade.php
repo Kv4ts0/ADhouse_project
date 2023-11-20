@@ -43,7 +43,7 @@
                         <div class="slide_text">
                             <h1>{{$sl->name}}</h1>
                             <p>{{$sl->description}}</p>
-                            <input type="button" value="Read more">
+                            <input id="readMoreB" type="button" value="Read more">
                         </div>
                         <div class="slide-img">
                             <img src="storage/slide/{{$sl->image}}" alt="Service Image">
@@ -56,7 +56,7 @@
                         <div class="slide_text">
                             <h1>{{$sl->name}}</h1>
                             <p>{{$sl->description}}</p>
-                            <input type="button" value="Read more">
+                            <input id="readMoreB" type="button" value="Read more">
                         </div>
                         <div class="slide-img">
                             <img src="storage/slide/{{$sl->image}}" alt="Service Image">
@@ -69,7 +69,7 @@
                         <div class="slide_text">
                             <h1>{{$sl->name}}</h1>
                             <p>{{$sl->description}}</p>
-                            <input type="button" value="Read more">
+                            <input id="readMoreB" type="button" value="Read more">
                         </div>
                         <div class="slide-img">
                             <img src="storage/slide/{{$sl->image}}" alt="Service Image">
@@ -83,7 +83,7 @@
     
     <div class="second_sec">
         <div class="slidecont">
-            <div class="indicator">
+            <div class="indicator1">
                 <span class="btn active"></span>
                 <span class="btn"></span>
                 <span class="btn"></span>
@@ -91,7 +91,7 @@
             <div class="testimonial">
                 <div class="slide-row" id="slide1">
                     <div class="slide-col">
-                        @foreach($slides->take(1) as $sl)
+                        @foreach($slides->skip(2)->take(1) as $sl)
                         <div class="slideLeft-img">
                             <img src="storage/slide/{{$sl->image}}" alt="Service Image">
                         </div>
@@ -115,7 +115,7 @@
                     </div>    
 
                     <div class="slide-col">
-                        @foreach($slides->skip(2)->take(1) as $sl)
+                        @foreach($slides->take(1) as $sl)
                         <div class="slideLeft-img">
                             <img src="storage/slide/{{$sl->image}}" alt="Service Image">
                         </div>

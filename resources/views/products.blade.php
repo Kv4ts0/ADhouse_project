@@ -123,7 +123,9 @@
             <div class="card">
                 <h3>{{$pr->name}}</h3>
                 <p class="limitedp5">{{$pr->description}}</p>
-                <input id="readMore" type="button" value="Read more">
+                <a href="{{ route('item',['id' => $pr->id]) }}">
+                    <input id="readMore" type="button" value="Read more">
+                </a>
                 <div></div>
                 <img src="storage/post/{{$pr->image1}}" alt="Ink product image">
             </div>
@@ -131,13 +133,16 @@
         </div>
     </div>
     <div class="third_sec">
-        <h1>Popular products</h1>
+        <h1>Related products</h1>
         <div class="container large">
-            @foreach($products->take(3) as $pr)
+        @foreach($products->skip(3)->take(3) as $pr)
             <div class="card">
-                <h3>{{$pr->name}}</h3>
-                <p class="limitedp30">{{$pr->description}}</p>
-                <input id="readMoreB" type="button" value="Read more">
+                
+                <h3>{{ $pr->name }}</h3>
+                <p class="limitedp5">{{ $pr->description }}</p>
+                <a href="{{ route('item',['id' => $pr->id]) }}">
+                    <input id="readMore" type="button" value="Read more">
+                </a>
                 <div></div>
                 <img src="storage/post/{{$pr->image1}}" alt="Ink product image">
             </div>

@@ -1,57 +1,62 @@
 <svg width="1920" height="718" viewBox="0 0 1920 718" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.765794 20H1920V709.338C1652.66 660.453 1792.45 173.34 1180.3 571.683C568.143 970.026 -24.2597 393.538 0.765794 709.338V20Z" fill="#A36190"/>
-<g filter="url(#filter0_d_223_3488)">
-<circle cx="1817.5" cy="121.5" r="77.5" fill="white" fill-opacity="0.11" shape-rendering="crispEdges"/>
+<g clip-path="url(#clip0_385_1633)">
+<path d="M0.765796 20H1920V709.338C1652.66 660.453 1792.45 173.34 1180.3 571.683C568.143 970.026 -24.2597 393.538 0.765796 709.338V20Z" fill="#6BB06C"/>
+<g filter="url(#filter0_d_385_1633)">
+<path d="M1817.5 199C1860.3 199 1895 164.302 1895 121.5C1895 78.6979 1860.3 44 1817.5 44C1774.7 44 1740 78.6979 1740 121.5C1740 164.302 1774.7 199 1817.5 199Z" fill="white" fill-opacity="0.11"/>
 </g>
-<g filter="url(#filter1_d_223_3488)">
-<circle cx="162.5" cy="175.5" r="128.5" fill="white" fill-opacity="0.11" shape-rendering="crispEdges"/>
+<g filter="url(#filter1_d_385_1633)">
+<path d="M162.5 304C233.469 304 291 246.469 291 175.5C291 104.531 233.469 47 162.5 47C91.5314 47 34 104.531 34 175.5C34 246.469 91.5314 304 162.5 304Z" fill="white" fill-opacity="0.11"/>
 </g>
-<g filter="url(#filter2_d_223_3488)">
-<circle cx="1856.5" cy="265.5" r="34" stroke="white" stroke-opacity="0.11" stroke-width="9" shape-rendering="crispEdges"/>
+<g filter="url(#filter2_d_385_1633)">
+<path d="M1856.5 299.5C1875.28 299.5 1890.5 284.278 1890.5 265.5C1890.5 246.722 1875.28 231.5 1856.5 231.5C1837.72 231.5 1822.5 246.722 1822.5 265.5C1822.5 284.278 1837.72 299.5 1856.5 299.5Z" stroke="white" stroke-opacity="0.11" stroke-width="9"/>
 </g>
-<g filter="url(#filter3_d_223_3488)">
-<circle cx="1072" cy="144" r="112" fill="white" fill-opacity="0.11" shape-rendering="crispEdges"/>
+<g filter="url(#filter3_d_385_1633)">
+<path d="M1072 256C1133.86 256 1184 205.856 1184 144C1184 82.1441 1133.86 32 1072 32C1010.14 32 960 82.1441 960 144C960 205.856 1010.14 256 1072 256Z" fill="white" fill-opacity="0.11"/>
+</g>
 </g>
 <defs>
-<filter id="filter0_d_223_3488" x="1722" y="12" width="227" height="227" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_385_1633" x="1722" y="12" width="227" height="227" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="18" dy="4"/>
 <feGaussianBlur stdDeviation="18"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_223_3488"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_223_3488" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_385_1633"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_385_1633" result="shape"/>
 </filter>
-<filter id="filter1_d_223_3488" x="16" y="15" width="329" height="329" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_d_385_1633" x="16" y="15" width="329" height="329" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="18" dy="4"/>
 <feGaussianBlur stdDeviation="18"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_223_3488"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_223_3488" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_385_1633"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_385_1633" result="shape"/>
 </filter>
-<filter id="filter2_d_223_3488" x="1818" y="222" width="95" height="95" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter2_d_385_1633" x="1818" y="222" width="95" height="95" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="9" dy="4"/>
 <feGaussianBlur stdDeviation="4.5"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_223_3488"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_223_3488" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_385_1633"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_385_1633" result="shape"/>
 </filter>
-<filter id="filter3_d_223_3488" x="942" y="0" width="296" height="296" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter3_d_385_1633" x="942" y="0" width="296" height="296" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="18" dy="4"/>
 <feGaussianBlur stdDeviation="18"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_223_3488"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_223_3488" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_385_1633"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_385_1633" result="shape"/>
 </filter>
+<clipPath id="clip0_385_1633">
+<rect width="1920" height="718" fill="white"/>
+</clipPath>
 </defs>
 </svg>

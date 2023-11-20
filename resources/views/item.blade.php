@@ -26,7 +26,7 @@
             <input type="button" value="Sign in">
         </div>
         <div class="language">
-            <img src="/images/language.svg" alt="ENG language">
+            <img src="images/language.svg" alt="ENG language">
         </div>
     </header>
 

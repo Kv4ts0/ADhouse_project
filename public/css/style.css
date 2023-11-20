@@ -46,14 +46,14 @@ nav li{
 }
 nav li a{
     text-decoration: none;
-    color: #4A203F;
+    color: #2C422C;
 }
 .authorization{
     margin-left: auto;
     margin-right: 100px;
 }
 .authorization > input{
-    background-color: #5F2F51;
+    background-color: #2C422C;
     color: white;
     font-size: 20px;
 }
@@ -136,8 +136,14 @@ nav li a{
 }
 .indicator{
     position: absolute;
-    left: 50%;
-    bottom: -50px;
+    bottom: 0;
+    left: 40px;
+    transform: translateX(-50%);
+}
+.indicator1{
+    position: absolute;
+    bottom: 0;
+    right: 40px;
     transform: translateX(-50%);
 }
 .btn{
@@ -146,13 +152,15 @@ nav li a{
     width: 20px;
     margin: 4px;
     border-radius: 50%;
-    background-color: #4A203F;
+    background-color: #2C422C;
     cursor: pointer;
 }
 .active{
     background-color: white;
 }
 .testimonial{
+    position: relative;
+    bottom: 70px;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -254,7 +262,7 @@ nav li a{
     font-size: 15px;
     width: 6rem;
     position: absolute;
-    background-color: #4A203F;
+    background-color: #0C610E;
     bottom: 0;
     right: 0;
 }
@@ -262,7 +270,7 @@ nav li a{
     border-radius: 12px;
     font-size: 20px;
     width: 10rem;
-    background-color: #4A203F;
+    background-color: #2C422C;
     border: none;
     bottom: 0;
     right: 0;
@@ -291,7 +299,6 @@ nav li a{
     padding: 40px;
     display: flex;
     background-color: white;
-    height: 100vh;
     width: 60rem;
     gap: 5rem;
 }
@@ -303,7 +310,7 @@ nav li a{
 .mainImage img{
     width: 100%;
     height: 20rem;
-    border: 4px solid #4A203F;
+    border: 4px solid #2C422C;
 }
 .otherImages{
     gap: 0.5rem;
@@ -311,7 +318,7 @@ nav li a{
     width: 20rem;
 }
 .otherImages img{
-    border: 4px solid #4A203F;
+    border: 4px solid #2C422C;
     width: 6rem;
     height: 6rem;
 }
@@ -323,6 +330,10 @@ nav li a{
 }
 .itemDesc span{
     font-weight: bold;
+}
+.large .card{
+    width: 100%;
+    height: 100%;
 }
 .card{
     border: 0.3px solid white;
@@ -340,12 +351,12 @@ nav li a{
 .card h3{
     z-index: 2;
     top: 5rem;
-    background-color: #5F2F51;
+    background-color: #0C610E;
 }
 .card p{
     z-index: 2;
     top: 7rem;
-    color: #4A203F;
+    color: #2C422C;
     background-color: #ffffff;
 }
 .card h3, .card p{
@@ -365,7 +376,7 @@ nav li a{
 }
 .container ul li .btn{
     border:none;
-    background-color: #5F2F51;
+    background-color: #0C610E;
     width: 20px;
     height: 20px;
     margin: 0 10px;
@@ -376,7 +387,7 @@ nav li a{
 }
 
 .container ul li, .third_sec ul li{
-    color: #5F2F51;
+    color: #0C610E;
     float: left;
     list-style: none;
 }
@@ -397,7 +408,7 @@ footer{
     margin-top: 10rem;
     width: 100%;
     height: 20rem;
-    background-color: #A36190;
+    background-color: #6BB06C;
 }
 footer .company{
     margin: 3rem 10rem;
@@ -434,7 +445,7 @@ footer .switcher{
 }
 .filter{
     top:0;
-    background-color: #4A203F;
+    background-color: #2C422C;
     width: 13rem;
     padding: 10px;
     height: 37rem;
@@ -445,7 +456,7 @@ footer .switcher{
     width: 90%;
 }
 .filter input{
-    background-color: #A36190;
+    background-color: #517d52;
     border: none;
     width: 100px;
     border-radius: 18px;
