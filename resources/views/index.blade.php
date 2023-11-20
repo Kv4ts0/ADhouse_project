@@ -30,46 +30,102 @@
         </div>
     </header>
     <div class="first_sec">
-        <div class="container">
-            <h1>Service Quality</h1>
-            <p>Welcome to AD House – your go-to source for top-notch 
-                printing materials and inks! Established in 2023, we're on a 
-                mission to make your printing projects shine.
-                
-                Quality That Speaks Volumes: At AD House, 
-                we bring you materials and inks that stand out. 
-                Our products are created with care, ensuring every 
-                print is a masterpiece.
-            </p>
-            <input type="button" value="Read more">
-            <ul>
-                <li id="active"></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <div class="slidecont">
+            <div class="indicator">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="testimonial">
+                <div class="slide-row" id="slide">
+                    <div class="slide-col">
+                        @foreach($slides->take(1) as $sl)
+                        <div class="slide_text">
+                            <h1>{{$sl->name}}</h1>
+                            <p>{{$sl->description}}</p>
+                            <input type="button" value="Read more">
+                        </div>
+                        <div class="slide-img">
+                            <img src="storage/slide/{{$sl->image}}" alt="Service Image">
+                        </div>
+                        @endforeach
+                    </div>    
+                    
+                    <div class="slide-col">
+                        @foreach($slides->skip(1)->take(1) as $sl)
+                        <div class="slide_text">
+                            <h1>{{$sl->name}}</h1>
+                            <p>{{$sl->description}}</p>
+                            <input type="button" value="Read more">
+                        </div>
+                        <div class="slide-img">
+                            <img src="storage/slide/{{$sl->image}}" alt="Service Image">
+                        </div>
+                        @endforeach
+                    </div>    
+
+                    <div class="slide-col">
+                        @foreach($slides->skip(2)->take(1) as $sl)
+                        <div class="slide_text">
+                            <h1>{{$sl->name}}</h1>
+                            <p>{{$sl->description}}</p>
+                            <input type="button" value="Read more">
+                        </div>
+                        <div class="slide-img">
+                            <img src="storage/slide/{{$sl->image}}" alt="Service Image">
+                        </div>
+                        @endforeach
+                    </div>    
+                </div>
+            </div>
         </div>
-        <img class="radialImg" src="./images/sec1im1.jpg" alt="Service Image">
     </div>
+    
     <div class="second_sec">
-        <div class="container second">
-            <img src="./images/sec2im2.jpg" class="radialImg" alt="Service Image">
-            <div class="desc">
-                <h1>Why us?</h1>
-                <p>Quality You Can See, Feel, and Trust: 
-                    At AD House, we prioritize quality above all else. Our printing 
-                    materials and inks are crafted with precision to 
-                    ensure your prints always make a lasting impression.<br>
-                    Tailored to Your Vision: <br>
-                    We understand that every project is unique. 
-                    That's why AD House offers a diverse range of 
-                    materials and inks, allowing you to choose the 
-                    perfect combination that aligns with your vision.
-                </p>
-                <ul>
-                    <li id="active"></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+        <div class="slidecont">
+            <div class="indicator">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="testimonial">
+                <div class="slide-row" id="slide1">
+                    <div class="slide-col">
+                        @foreach($slides->take(1) as $sl)
+                        <div class="slideLeft-img">
+                            <img src="storage/slide/{{$sl->image}}" alt="Service Image">
+                        </div>
+                        <div class="slideRight_text">
+                            <h1>{{$sl->name}}</h1>
+                            <p>{{$sl->description}}</p>
+                        </div>
+                        @endforeach
+                    </div>    
+                    
+                    <div class="slide-col">
+                        @foreach($slides->skip(1)->take(1) as $sl)
+                        <div class="slideLeft-img">
+                            <img src="storage/slide/{{$sl->image}}" alt="Service Image">
+                        </div>
+                        <div class="slideRight_text">
+                            <h1>{{$sl->name}}</h1>
+                            <p>{{$sl->description}}</p>
+                        </div>
+                        @endforeach
+                    </div>    
+
+                    <div class="slide-col">
+                        @foreach($slides->skip(2)->take(1) as $sl)
+                        <div class="slideLeft-img">
+                            <img src="storage/slide/{{$sl->image}}" alt="Service Image">
+                        </div>
+                        <div class="slideRight_text">
+                            <h1>{{$sl->name}}</h1>
+                            <p>{{$sl->description}}</p>
+                        </div>
+                        @endforeach
+                    </div>    
+                </div>
             </div>
         </div>
     </div>
@@ -111,6 +167,7 @@
             <p><span class="material-symbols-outlined">map </span> Tbilisi, Gldani, N 3 M.Nozadze St</p>
         </div>
     </div>
+
     <footer>
         <div class="company">
             <a href="./index">
@@ -138,5 +195,6 @@
             <img src="./images/Languagedark.svg" alt="Language switcher">
         </div>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 </html>

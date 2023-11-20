@@ -48,6 +48,10 @@ class ProductController extends Controller
         $product = Product::where('id', $id)->first();
         return view('edit-product')->with('product', $product);
     }
+    public function editSlide(Request $request, $id){
+        $slide = Slide::where('id', $id)->first();
+        return view('edit-slides')->with('slide', $slide);
+    }
     public function updateProduct(Request $request, $id){
         $product = Product::findOrFail($id);
         $product->name = $request->name;
@@ -87,6 +91,19 @@ class ProductController extends Controller
         return redirect()->route('products.all');
     }
     
+    public function updateSlide(Request $request, $id){
+        $slide = Slide::findOrFail($id);
+        $slide->name = $request->name;
+        $slide->description = $request->description;
+        if ($request->hasFile('image')) {
+            $name = $request->file('image')->getClientOriginalName();
+            $request->file('image')->storeAs('public/slide', $name);
+            $slide->image = $name;
+        }
+        $slide->save();
+    
+        return redirect()->route('slides.all');
+    }
     public function addNewProduct(Request $request){
         $product = new Product();
         $product->name = $request->name;
@@ -131,14 +148,19 @@ class ProductController extends Controller
         Product::where('id', $request->product_id)->delete();
         return redirect()->route('products.all');
     }
+    public function deleteSlide(Request $request){
+        Slide::where('id', $request->slide_id)->delete();
+        return redirect()->route('slides.all');
+    }
     public function viewAllslide(Request $request){
         $slides = Slide::orderBy('created_at', 'DESC')->get();
         return view('all-slides')->with('slides', $slides);
     }
 
     public function viewHomepage(Request $request){
+        $slides = Slide::orderBy('created_at', 'DESC')->get();
         $products = $this->getFilteredProducts($request);
-        return view('index')->with('products', $products)->with('filters', [
+        return view('index')->with('slides', $slides)->with('products', $products)->with('filters', [
             'id' => $request->id,
             'name' => $request->name,
             'category' => $request->category,

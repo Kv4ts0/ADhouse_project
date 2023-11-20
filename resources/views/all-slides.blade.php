@@ -37,8 +37,17 @@
                 <td><p>{{ $sl->description }}</p></td>
                 <td><img width=100px height="100px" src="storage/slide/{{$sl->image}}" alt=""></td>
                 <td>{{ $sl->created_at }}</td>
+                <td>
+                    <form action="{{ route('slides.delete') }}" method="POST">
+                    @csrf
+                        <input type="hidden" name="slide_id" value="{{ $sl->id }}" />
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                    <a href="{{ route('slides.edit',['id' => $sl->id]) }}" class="btn btn-primary" >Edit</a>
+                </td>
             </tr>
         @endforeach
+        
         </table>
         </form>
     </div>

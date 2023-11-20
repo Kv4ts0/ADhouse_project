@@ -30,25 +30,55 @@
         </div>
     </header>
     <div class="first_sec">
-        <div class="container">
-            <h1>Neon lights</h1>
-            <p>The process begins with a design or concept for the neon 
-                sign. This could be a business logo, a piece of artwork, or any 
-                other visual representation.
-                
-                Electrodes, typically made of pure iron or coated with special 
-                materials, are attached to each end of the glass tube. These 
-                electrodes facilitate the flow of electric current through 
-                the neon gas.
-            </p>
-            <input type="button" value="Read more">
-            <ul>
-                <li id="active"></li>
-                <li></li>
-                <li></li>
-            </ul>
+    <div class="slidecont">
+            <div class="indicator">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="testimonial">
+                <div class="slide-row" id="slide">
+                    <div class="slide-col">
+                        @foreach($products->take(1) as $pr)
+                        <div class="slide_text">
+                            <h1>{{$pr->name}}</h1>
+                            <p>{{$pr->description}}</p>
+                            <input type="button" value="Read more">
+                        </div>
+                        <div class="slide-img">
+                            <img src="storage/post/{{$pr->image1}}" alt="Service Image">
+                        </div>
+                        @endforeach
+                    </div>    
+                    
+                    <div class="slide-col">
+                        @foreach($products->skip(1)->take(1) as $pr)
+                        <div class="slide_text">
+                            <h1>{{$pr->name}}</h1>
+                            <p>{{$pr->description}}</p>
+                            <input type="button" value="Read more">
+                        </div>
+                        <div class="slide-img">
+                            <img src="storage/post/{{$pr->image1}}" alt="Service Image">
+                        </div>
+                        @endforeach
+                    </div>    
+
+                    <div class="slide-col">
+                        @foreach($products->skip(2)->take(1) as $pr)
+                        <div class="slide_text">
+                            <h1>{{$pr->name}}</h1>
+                            <p>{{$pr->description}}</p>
+                            <input type="button" value="Read more">
+                        </div>
+                        <div class="slide-img">
+                            <img src="storage/post/{{$pr->image1}}" alt="Service Image">
+                        </div>
+                        @endforeach
+                    </div>    
+                </div>
+            </div>
         </div>
-        <img src="./images/neonimg.jpg" class="rectangleIMG" alt="">
     </div>
     
     <div class="products">
@@ -114,6 +144,7 @@
             <li></li>
         </ul>
     </div>
+    <script src="./js/index.js"></script>
     <footer>
         <div class="company">
             <a href="/index">

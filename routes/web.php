@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/index', "App\Http\Controllers\ProductController@viewHomepage");
-Route::get('/', "App\Http\Controllers\ProductController@viewHomepage");
+Route::get('/', "App\Http\Controllers\ProductController@viewHomepage")->name('mainpage');
 Route::get('/allproducts', "App\Http\Controllers\ProductController@viewProductpage")->name('allproducts.all');;
 Route::get('/faq', "App\Http\Controllers\PageController@faq");
 
@@ -17,6 +17,9 @@ Route::middleware('custom-auth')->post('/product/update/{id}', '\App\Http\Contro
 
 Route::middleware('custom-auth')->post('/slide/add', '\App\Http\Controllers\ProductController@addNewSlide')->name('slides.add');
 Route::middleware('custom-auth')->get('/slides', '\App\Http\Controllers\ProductController@viewAllSlide')->name('slides.all');
+Route::middleware('custom-auth')->get('/slide/edit/{id}', '\App\Http\Controllers\ProductController@editSlide')->name('slides.edit');
+Route::middleware('custom-auth')->post('/slide/delete', '\App\Http\Controllers\ProductController@deleteSlide')->name('slides.delete');
+Route::middleware('custom-auth')->post('/slide/update/{id}', '\App\Http\Controllers\ProductController@updateSlide')->name('slides.update');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
