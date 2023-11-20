@@ -60,7 +60,8 @@ nav li a{
 .language{
     margin-right: 100px;
 }
-.first_sec{
+.first_sec, .item_sec{
+    display: flex;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../images/decoration.svg");
@@ -261,8 +262,8 @@ nav li a{
     border-radius: 12px;
     font-size: 20px;
     width: 10rem;
-    position: absolute;
     background-color: #4A203F;
+    border: none;
     bottom: 0;
     right: 0;
 }
@@ -280,6 +281,48 @@ nav li a{
 }
 .third_sec .third .card div:hover, .allProducts .card div:hover, .third_sec .large .card div:hover{
     display: none;
+}
+.item_sec{
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.itemReview{
+    padding: 40px;
+    display: flex;
+    background-color: white;
+    height: 100vh;
+    width: 60rem;
+    gap: 5rem;
+}
+.itemImages{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+.mainImage img{
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #4A203F;
+}
+.otherImages{
+    gap: 0.5rem;
+    display: flex;
+    width: 20rem;
+}
+.otherImages img{
+    border: 4px solid #4A203F;
+    width: 6rem;
+    height: 6rem;
+}
+.itemDesc{
+    width: 30rem;
+}
+.itemDesc h2{
+    font-weight: 400;
+}
+.itemDesc span{
+    font-weight: bold;
 }
 .card{
     border: 0.3px solid white;

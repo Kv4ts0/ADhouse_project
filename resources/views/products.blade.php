@@ -43,7 +43,9 @@
                         <div class="slide_text">
                             <h1>{{$pr->name}}</h1>
                             <p>{{$pr->description}}</p>
-                            <input type="button" value="Read more">
+                            <a href="{{ route('item',['id' => $pr->id]) }}">
+                                <input id="readMoreB" type="button" value="Read more">
+                            </a>
                         </div>
                         <div class="slide-img">
                             <img src="storage/post/{{$pr->image1}}" alt="Service Image">
@@ -56,7 +58,9 @@
                         <div class="slide_text">
                             <h1>{{$pr->name}}</h1>
                             <p>{{$pr->description}}</p>
-                            <input type="button" value="Read more">
+                            <a href="{{ route('item',['id' => $pr->id]) }}">
+                                <input id="readMoreB" type="button" value="Read more">
+                            </a>
                         </div>
                         <div class="slide-img">
                             <img src="storage/post/{{$pr->image1}}" alt="Service Image">
@@ -69,7 +73,9 @@
                         <div class="slide_text">
                             <h1>{{$pr->name}}</h1>
                             <p>{{$pr->description}}</p>
-                            <input type="button" value="Read more">
+                            <a href="{{ route('item',['id' => $pr->id]) }}">
+                                <input id="readMoreB" type="button" value="Read more">
+                            </a>
                         </div>
                         <div class="slide-img">
                             <img src="storage/post/{{$pr->image1}}" alt="Service Image">

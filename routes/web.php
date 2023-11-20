@@ -8,6 +8,7 @@ Route::get('/index', "App\Http\Controllers\ProductController@viewHomepage");
 Route::get('/', "App\Http\Controllers\ProductController@viewHomepage")->name('mainpage');
 Route::get('/allproducts', "App\Http\Controllers\ProductController@viewProductpage")->name('allproducts.all');;
 Route::get('/faq', "App\Http\Controllers\PageController@faq");
+Route::get('/item/{id}', "App\Http\Controllers\ProductController@viewItempage")->name('item');
 
 Route::middleware('custom-auth')->get('/product/edit/{id}', '\App\Http\Controllers\ProductController@editProduct')->name('products.edit');
 Route::middleware('custom-auth')->get('/products', '\App\Http\Controllers\ProductController@viewAllProduct')->name('products.all');

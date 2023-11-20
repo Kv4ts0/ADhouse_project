@@ -48,6 +48,7 @@ class ProductController extends Controller
         $product = Product::where('id', $id)->first();
         return view('edit-product')->with('product', $product);
     }
+
     public function editSlide(Request $request, $id){
         $slide = Slide::where('id', $id)->first();
         return view('edit-slides')->with('slide', $slide);
@@ -168,6 +169,7 @@ class ProductController extends Controller
             'max_price' => $request->max_price,
         ]);
     }
+
     public function viewProductpage(Request $request){
         $products = $this->getFilteredProducts($request);
         return view('products')->with('products', $products)->with('filters', [
@@ -177,5 +179,9 @@ class ProductController extends Controller
             'min_price' => $request->min_price,
             'max_price' => $request->max_price,
         ]);
+    }
+    public function viewItempage(Request $request, $id){
+        $product = Product::where('id', $id)->first();
+        return view('item')->with('product', $product);
     }
 }

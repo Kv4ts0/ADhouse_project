@@ -137,7 +137,9 @@
                 
                 <h3>{{ $pr->name }}</h3>
                 <p class="limitedp5">{{ $pr->description }}</p>
-                <input id="readMore" type="button" value="Read more">
+                <a href="{{ route('item',['id' => $pr->id]) }}">
+                    <input id="readMore" type="button" value="Read more">
+                </a>
                 <div></div>
                 <img src="storage/post/{{$pr->image1}}" alt="Ink product image">
             </div>
