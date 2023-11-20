@@ -53,6 +53,9 @@
                                     <a style="padding-left: 10px; font-weight: bold;" class="dropdown-item" href="{{ route('products.all') }}">
                                         Edit Products
                                     </a>
+                                    <a style="padding-left: 10px; font-weight: bold;" class="dropdown-item" href="{{ route('slides.all') }}">
+                                        Edit Slides
+                                    </a>
                                     <a style="padding-left: 10px; font-weight: bold;" class="dropdown-item" href="{{ route('auth.custom.logout') }}" onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                                     {{ __('Logout') }}

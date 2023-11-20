@@ -14,6 +14,9 @@ Route::middleware('custom-auth')->get('/products', '\App\Http\Controllers\Produc
 Route::middleware('custom-auth')->post('/product/add', '\App\Http\Controllers\ProductController@addNewProduct')->name('products.add');
 Route::middleware('custom-auth')->post('/product/delete', '\App\Http\Controllers\ProductController@deleteProduct')->name('products.delete');
 Route::middleware('custom-auth')->post('/product/update/{id}', '\App\Http\Controllers\ProductController@updateProduct')->name('products.update');
+
+Route::middleware('custom-auth')->post('/slide/add', '\App\Http\Controllers\ProductController@addNewSlide')->name('slides.add');
+Route::middleware('custom-auth')->get('/slides', '\App\Http\Controllers\ProductController@viewAllSlide')->name('slides.all');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

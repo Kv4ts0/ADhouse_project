@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Slide;
 use App\Models\Photo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -115,9 +116,24 @@ class ProductController extends Controller
         $product->save();      
         return redirect()->route('products.all');
     }
+    public function addNewSlide(Request $request){
+        $slide = new Slide();
+        $slide->name = $request->name;
+        $slide->description = $request->description;
+        $sizeS = $request->file('image')->getSize();
+        $nameS = $request->file('image')->getClientOriginalName();
+        $request->file('image')->storeAs('public/slide', $nameS);
+        $slide->image = $nameS;
+        $slide->save();      
+        return redirect()->route('slides.all');
+    }
     public function deleteProduct(Request $request){
         Product::where('id', $request->product_id)->delete();
         return redirect()->route('products.all');
+    }
+    public function viewAllslide(Request $request){
+        $slides = Slide::orderBy('created_at', 'DESC')->get();
+        return view('all-slides')->with('slides', $slides);
     }
 
     public function viewHomepage(Request $request){
