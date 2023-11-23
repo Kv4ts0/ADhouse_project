@@ -1,4 +1,20 @@
 
+const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
+
+openMenu.addEventListener('click', show);
+closeMenu.addEventListener('click', close);
+
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+}
+
+function close(){
+    mainMenu.style.top = '-100%';
+}
+
 var btn = document.getElementsByClassName("btn");
 var slide = document.getElementById("slide");
 var slide1 = document.getElementById("slide1");
@@ -41,3 +57,4 @@ btn[5].onclick = function(){
     btn[3].style.backgroundColor = "#2C422C";
     btn[4].style.backgroundColor = "#2C422C";
 }
+

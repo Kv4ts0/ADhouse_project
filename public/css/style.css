@@ -8,7 +8,7 @@ header{
     align-items: center;
     width: 100%;
     height: 100px;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
 }
 .limitedp{
@@ -59,6 +59,9 @@ nav li a{
 }
 .language{
     margin-right: 100px;
+}
+.languageH{
+    display: none;
 }
 .first_sec, .item_sec{
     display: flex;
@@ -430,9 +433,7 @@ footer nav ul{
 footer nav li a{
     color: white;
 }
-footer .switcher{
-    margin:3rem auto;
-}
+
 .products{
     margin-top: 10rem;
     background-image: url("../images/decoration7.svg");
@@ -440,6 +441,7 @@ footer .switcher{
     height: 100vh;
     display: flex;
     align-items: center;
+    background-size: cover;
     justify-content: space-around;
     color: white;
 }
@@ -500,4 +502,294 @@ footer .switcher{
     grid-template-columns: repeat(3, 15rem);
     grid-template-rows: repeat(2, 15rem);
     gap: 3rem;
+}
+.openMenu{
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+nav .closeMenu, .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+#check{
+    position: absolute;
+    left: 0;
+}
+.checkbtn{
+    position: absolute;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    float: right;
+}
+.authorizationH{
+    display: none;
+}
+footer .switcher{
+    margin:3rem auto;
+}
+footer .switcherH{
+    display: none;
+}
+@media only screen and (max-width: 1275px) {
+    nav .mainMenu{
+        height: 30rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        gap: 3rem;
+        flex-direction: column;
+        background-color: #ffffff;
+        transform: top 1s ease;
+        display: none;
+    }
+    .language{
+        display: none;
+    }
+    .faq{
+        gap:0;
+    }
+    .languageH{
+        top: 1rem;
+        position: relative;
+        display: inline-block;
+    }
+    header > a img{
+        position: absolute;
+        right: 2rem;
+        width: 10rem;
+    }
+    footer .switcher{
+        display: none;
+    }
+    .company{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .products{
+        gap: 5rem;
+    }
+    .rel{
+        height: 100rem;
+    }
+    .large{
+        grid-template-columns: 20rem;
+        grid-template-rows: 20rem;
+    }
+    .allProducts{
+        width: 40rem;
+        grid-template-columns: repeat(2, 15rem);
+        grid-template-rows: repeat(2, 15rem);
+    }
+    footer{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    footer .switcherH{
+        margin:3rem auto;
+    }
+    .authorizationH {
+        display: block;
+    }
+    .authorizationH input{
+            font-size: 1.5rem;
+            background-color: #2C422C;
+            color: white;
+    }
+    .authorization{
+        display: none;
+    }
+    nav .mainMenu .closeMenu{
+        display: block;
+        top: 20px;
+        right: 20px;
+    }
+    .openMenu{
+        position: absolute;
+        left: 0;
+        color: black;
+        display: inline-block;
+    }
+    nav .openMenu{
+        display: block;
+    }
+    nav .mainMenu li a:hover{
+        background: none;
+        color: white;
+        font-size: 1.6rem;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
+@media only screen and (max-width: 960px) {
+    .faq{
+
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 840px) {
+
+    .allProducts{
+        grid-template-columns: 20rem;
+        grid-template-rows: 20rem;
+        width: 40rem;
+    }
+    .filter{
+        height: 100%;
+        width: 16rem;
+    }
+    .products{
+        height: 140rem;
+        align-items: flex-start;
+    }
+    .slide-img{
+        position: static;
+    }
+    .slide_text{
+        padding: 20px;
+        text-align: center;
+        position: static;
+    }
+    .first_sec{
+        flex-direction: column;
+    }
+    .slidecont{
+        width: 450px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .indicator{
+        margin-left: auto;
+        left: auto;
+        transform: translateX(0);
+        bottom: 5rem;
+        z-index: 10;
+    }
+    .indicator1{
+        transform: translateX(0);
+        margin-right: auto;
+        right: auto;
+        z-index: 10;
+        bottom: 5rem;
+    }
+    .third{
+        width: 100%;
+        justify-content: center;
+        grid-template-columns: 16rem 16rem;
+        grid-template-rows: 16rem 16rem;
+    }
+    .slide-col{
+        width: 450px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .fourth_sec{
+        flex-direction: column;
+    }
+    .slide-row{
+        height: 50rem;
+    }
+    .slideLeft-img{
+        position: static;
+    }
+    .slideRight_text{
+        text-align: center;
+        position: static;
+    }
+}
+@media only screen and (max-width: 580px){
+    .allProducts{
+        grid-template-columns: 18rem;
+        grid-template-rows: 18rem;
+        width: 35rem;
+    }
+    .products{
+        gap: 1rem;
+    }
+    .first_sec{
+        height: 70rem;
+    }
+    .second_sec{
+        margin-top: 0;
+        height: 70rem;
+    }
+    .third_sec{
+        margin-top: 0;
+        height: 130rem;
+    }
+    .rel{
+        margin-top: 10rem;
+    }
+    .third{
+        grid-template-columns: 17rem;
+        grid-template-rows: 17rem;
+    }
+    .fourth_sec{
+        margin-top: 0;
+        height: 75rem;
+    }
+    .radialImg{
+        width: 20rem;
+        height: 20rem;
+    }
+    .fourth_sec div{
+        width: 20rem;
+    }
+    .slide-col{
+        width: 340px;
+    }
+    .slidecont{
+        width: 340px;
+    }
+    .slideRight_text{
+        width: 340px;
+    }
+    .slide_text{
+        width: 340px;
+    }
+    .faq{
+        height: 130rem;
+    }
+    .faq img{
+        width: 20rem;
+    }
+}
+@media only screen and (max-width: 480px){
+    .fourth_sec div{
+        width: 15rem;
+    }
+    .faq{
+        height: 100rem;
+    }
+    .allProducts{
+        grid-template-columns: 12rem;
+        grid-template-rows: 12rem;
+        width: 20rem;
+    }
+    .slideRight_text{
+        width: 340px;
+    }
+    .slide_text{
+        width: 340px;
+    }
+    .products{
+        height: 100rem;
+    }
 }

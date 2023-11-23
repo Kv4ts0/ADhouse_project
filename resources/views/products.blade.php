@@ -6,20 +6,36 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Products</title>
 </head>
 <body>
-    <header>
+<header>
         <a href="/index">
             <img src="./images/logo.svg" alt="Logo Image">
         </a>
+        
         <nav>
-            <li><a href="/index">Home</a></li>
-            <li><a id="activeItem" href="/allproducts">Products</a></li>
-            <li><a href="/index#contact">Contact</a></li>
-            <li><a href="/faq">F.A.Q</a></li>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a id="activeItem" href="/index">Home</a></li>
+                <li><a href="/allproducts">Products</a></li>
+                <li><a href="/index#contact">Contact</a></li>
+                <li><a href="/faq">F.A.Q</a></li>
+                <div class="authorizationH">
+                    <input type="button" value="Sign up">
+                    <input type="button" value="Sign in">
+                </div>
+                <div class="closeMenu"><i class="fa fa-times"></i>
+                <span class="icons">
+                    <div class="languageH">
+                        <img src="images/language.svg" alt="ENG language">
+                    </div>
+                </span>
+            </ul>
+            </div>
         </nav>
         <div class="authorization">
             <input type="button" value="Sign up">
@@ -40,6 +56,9 @@
                 <div class="slide-row" id="slide">
                     <div class="slide-col">
                         @foreach($products->take(1) as $pr)
+                        <div class="slide-img">
+                            <img src="storage/post/{{$pr->image1}}" alt="Service Image">
+                        </div>
                         <div class="slide_text">
                             <h1>{{$pr->name}}</h1>
                             <p>{{$pr->description}}</p>
@@ -47,14 +66,15 @@
                                 <input id="readMoreB" type="button" value="Read more">
                             </a>
                         </div>
-                        <div class="slide-img">
-                            <img src="storage/post/{{$pr->image1}}" alt="Service Image">
-                        </div>
+
                         @endforeach
                     </div>    
                     
                     <div class="slide-col">
                         @foreach($products->skip(1)->take(1) as $pr)
+                        <div class="slide-img">
+                            <img src="storage/post/{{$pr->image1}}" alt="Service Image">
+                        </div>
                         <div class="slide_text">
                             <h1>{{$pr->name}}</h1>
                             <p>{{$pr->description}}</p>
@@ -62,14 +82,15 @@
                                 <input id="readMoreB" type="button" value="Read more">
                             </a>
                         </div>
-                        <div class="slide-img">
-                            <img src="storage/post/{{$pr->image1}}" alt="Service Image">
-                        </div>
+
                         @endforeach
                     </div>    
 
                     <div class="slide-col">
                         @foreach($products->skip(2)->take(1) as $pr)
+                        <div class="slide-img">
+                            <img src="storage/post/{{$pr->image1}}" alt="Service Image">
+                        </div>
                         <div class="slide_text">
                             <h1>{{$pr->name}}</h1>
                             <p>{{$pr->description}}</p>
@@ -77,9 +98,7 @@
                                 <input id="readMoreB" type="button" value="Read more">
                             </a>
                         </div>
-                        <div class="slide-img">
-                            <img src="storage/post/{{$pr->image1}}" alt="Service Image">
-                        </div>
+
                         @endforeach
                     </div>    
                 </div>
@@ -132,7 +151,7 @@
             @endforeach
         </div>
     </div>
-    <div class="third_sec">
+    <div class="third_sec rel">
         <h1>Related products</h1>
         <div class="container large">
         @foreach($products->skip(3)->take(3) as $pr)
@@ -155,7 +174,7 @@
             <li></li>
         </ul>
     </div>
-    <script src="./js/index.js"></script>
+
     <footer>
         <div class="company">
             <a href="/index">
@@ -183,5 +202,6 @@
             <img src="./images/Languagedark.svg" alt="Language switcher">
         </div>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 </html>
